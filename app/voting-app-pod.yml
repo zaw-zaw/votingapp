@@ -9,5 +9,12 @@ spec:
   containers:
   - name: voting-app
     image: dockersamples/examplevotingapp_vote
+    volumeMounts:
+    - mountPath: "/mnt/azure"
+      name: volume
+  volumes:
+    - name: volume
+      persistentVolumeClaim:
+        claimName: azure-managed-disk
     ports:
          - containerPort: 80
