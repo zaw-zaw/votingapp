@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: myfrontend
-      image: mcr.microsoft.com/oss/nginx/nginx:1.15.5-alpine
+      image: nginx:latest
       volumeMounts:
       - mountPath: "/mnt/azure"
         name: volume
